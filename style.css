@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: #220F24;
+}
+
+.hamb-nav {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.hamb-nav img {
+  max-height: 48px;
+}
+
+.fa-bars {
+  font-size: 2rem;
+  color: #fff;
+}
