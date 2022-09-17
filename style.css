@@ -2,13 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Source Code Pro', monospace;
+#6EA4BF
+*/
+
+/* ------------------ NAV BAR ------------------ */
 nav {
   background-color: #220F24;
-}
-
-.hamb-nav {
   height: 60px;
   display: flex;
   align-items: center;
@@ -16,7 +21,7 @@ nav {
   padding: 0 20px;
 }
 
-.hamb-nav img {
+nav img {
   max-height: 48px;
 }
 
@@ -24,3 +29,195 @@ nav {
   font-size: 2rem;
   color: #fff;
 }
+
+.page-content section {
+  padding: 0 20px;
+}
+
+/* ------------------ HOME ------------------ */
+.home-container {
+  min-height: calc(100vh - 60px);
+  position: relative;
+  overflow: hidden;
+}
+
+.lang-container {
+  color: #220F24;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  min-width: 80px;
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+#lang-active {
+  font-family: 'Source Code Pro', monospace;
+  padding: 0.5rem 0;
+  text-align: end;
+  color: #220F24;
+}
+
+.languages {
+  /* opacity: 0; */
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
+
+.languages img {
+  width: 16px;
+  margin-right: 0.5rem;
+}
+
+.lang-container li {
+  width: 100%;
+  list-style-type: none;
+  padding: 0.25rem 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.languages span {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.home-text{
+  position: absolute;
+  top: 10%;
+  color: #1A535C;
+}
+
+.home-text p, strong {
+  font-family: 'Source Code Pro', monospace;
+}
+
+h1 {
+  font-size: clamp(3rem, 14vw, 5rem);
+}
+
+.profile-circle-01 {
+  position: absolute;
+  bottom: 8vh;
+  right: 10vw;
+  width: 230px;
+  height: 230px;
+  border: solid 8px #331E36;
+  border-radius: 100%;
+}
+
+.profile-circle-02 {
+  margin-top: 2px;
+  width: 230px;
+  height: 230px;
+  border: solid 16px #1A535C;
+  border-radius: 100%;
+  animation: border-color-02 10s infinite;
+}
+
+@keyframes border-color-02 {
+  0%{
+    border: solid 16px #1A535C;
+  }
+  50%{
+    border: solid 16px #6EA4BF;
+  }
+  100%{
+    border: solid 16px #1A535C;
+  }
+}
+
+.profile-pic {
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  width: 212px;
+  border-radius: 100%;
+}
+
+.bg-line-01 {
+  position: absolute;
+  transform: rotateZ(-24deg);
+  left: -50%;
+  bottom: 35%;
+  width: 200%;
+  border-top: 8px solid #6EA4BF;
+  animation: bg-line-01 8s infinite ease-in-out;
+}
+
+@keyframes bg-line-01 {
+  0% {
+    transform: rotateZ(-20deg);
+  }
+  50% {
+    transform: rotateZ(-30deg);
+  }
+  100% {
+    transform: rotateZ(-20deg);
+  }
+}
+
+.bg-line-02 {
+  position: absolute;
+  transform: rotateZ(-20deg);
+  left: -50%;
+  bottom: 25%;
+  width: 200%;
+  border-top: 6px solid #220F24;
+  animation: bg-line-02 6s infinite ease-in-out;
+}
+
+@keyframes bg-line-02 {
+  0% {
+    transform: rotateZ(-20deg);
+  }
+  50% {
+    transform: rotateZ(-15deg);
+  }
+  100% {
+    transform: rotateZ(-20deg);
+  }
+}
+
+.home-scroll-sign {
+  position: absolute;
+  bottom: 2vh;
+  right: 2vw;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.home-scroll-sign p {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #6EA4BF;
+}
+
+.home-scroll-sign .fa-arrow-down {
+  font-size: 1.5rem;
+  animation: point-down 1.5s infinite;
+  color: #6EA4BF;
+}
+
+@keyframes point-down {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 0.5rem;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+/* ------------------ ABOUT ------------------ */
+
+/* ------------------ SKILLS ------------------ */
+
+/* ------------------ PORTFOLIO ------------------ */
+
+/* ------------------ CONTACT ------------------ */
