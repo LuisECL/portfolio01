@@ -11,15 +11,23 @@ font-family: 'Source Code Pro', monospace;
 #6EA4BF
 */
 
+section {
+  min-height: calc(100vh - 60px);
+}
+
 /* ------------------ NAV BAR ------------------ */
 nav {
+  position: fixed;
+  top: 0;
   background-color: #220F24;
   height: 60px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  z-index: 10;
 }
 
 nav img {
@@ -31,13 +39,16 @@ nav img {
   color: #fff;
 }
 
+.page-content {
+  margin-top: 60px;
+}
+
 .page-content section {
   padding: 0 20px;
 }
 
 /* ------------------ HOME ------------------ */
 .home-container {
-  min-height: calc(100vh - 60px);
   position: relative;
   overflow: hidden;
 }
