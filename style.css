@@ -46,6 +46,12 @@ nav img {
   color: #fff;
 }
 
+nav .fa-circle-xmark {
+  display: none;
+  color: #fff;
+  font-size: 2rem;
+}
+
 main {
   margin-top: 60px;
 }
@@ -62,6 +68,34 @@ main section {
   height: calc(100vh - 60px);
   background-color: #331E36;
   z-index: 2;
+}
+
+.nav-modal-container.show {
+  display: block;
+  animation: show-nav-modal 1s ease 1;
+}
+
+@keyframes show-nav-modal {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.nav-modal-container.hide {
+  display: block;
+  animation: hide-nav-modal 1s ease 1;
+}
+
+@keyframes hide-nav-modal {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 .nav-modal-container ul {
@@ -165,7 +199,7 @@ main section {
   color: #1A535C;
 }
 
-.home-text p > strong {
+.home-text p {
   font-family: 'Source Code Pro', monospace;
 }
 
