@@ -523,7 +523,7 @@ section h2 {
   color: #6EA4BF;
   font-size: 1.5rem;
   margin-left: 0.5rem;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .project-active {
@@ -564,7 +564,7 @@ section h2 {
 
 .portfolio-modal-bg h3 {
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 
@@ -606,6 +606,7 @@ section h2 {
 .portfolio-modal-bg video {
   width: 200px;
   height: 160px;
+  margin-top: 1rem;
   object-fit: cover;
   object-position: 0% 0%;
 }
@@ -619,8 +620,15 @@ section h2 {
   width: 100%;
 }
 
+.prev-project, .next-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .fa-circle-chevron-right, .fa-circle-chevron-left {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .project-links {
