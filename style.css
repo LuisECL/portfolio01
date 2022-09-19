@@ -381,7 +381,7 @@ section h2 {
 }
 
 .about-container .bg-text p {
-  transform: translateX(8%);
+  transform: translateX(24px);
 }
 
 /* ------------------ SKILLS ------------------ */
@@ -637,7 +637,15 @@ section h2 {
   padding-bottom: 0.3rem;
 }
 
+.portfolio-container .bg-text {
+  transform: translate(8%, 8%);
+}
+
 /* ------------------ CONTACT ------------------ */
+section.contact-container {
+  overflow: hidden;
+}
+
 .contact-text p {
   margin-bottom: 1rem;
 }
@@ -699,12 +707,20 @@ form button {
   font-weight: 100;
 }
 
-/* ------------------ CONTACT ------------------ */
+.contact-container .bg-text {
+  overflow: visible;
+}
+
+.contact-container .bg-text p {
+  transform: translate(7%, 24%);
+}
+
+/* ------------------ FOOTER ------------------ */
 footer {
   width: 100%;
   height: 60px;
-  margin-top: 2rem;
   padding: 0 1.5rem;
+  margin-top: 2rem;
   background-color: #331E36;
   display: flex;
   justify-content: space-between;
