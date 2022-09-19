@@ -638,3 +638,63 @@ section h2 {
 }
 
 /* ------------------ CONTACT ------------------ */
+.contact-text p {
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  width: 100%;
+  height: 36px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #FCF7F8;
+  color: #6EA4BF;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Source Code Pro', monospace;
+}
+
+form input:focus {
+  background-color: #331E36;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #FCF7F8;
+  color: #6EA4BF;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Source Code Pro', monospace;
+}
+
+textarea:focus {
+  background-color: #331E36;
+}
+
+form input::placeholder {
+  color: #6EA4BF;
+}
+
+form textarea::placeholder {
+  color: #6EA4BF;
+}
+
+form button {
+  width: 100px;
+  height: 30px;
+  margin-left: auto;
+  right: 0;
+  border: none;
+  background-color: #331E36;
+  color: #FCF7F8;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1rem;
+  font-weight: 100;
+}
