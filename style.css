@@ -534,4 +534,106 @@ section h2 {
   color: #f5f5f5;
 }
 
+/* -------------- PORTFOLIO-MODAL -------------- */
+.portfolio-modal-container {
+  position: fixed;
+  top: 60px;
+  height: calc(100vh - 60px);
+  width: 100%;
+  background-color: rgba(0, 0, 0, .30);
+  z-index: 3;
+}
+
+.portfolio-modal-bg {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: clamp(468px, 90%, 720px);
+  width: clamp(280px, 90%, 900px);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: #220F24;
+  border-radius: 16px;
+  padding: 1rem;
+  padding-top: 2rem;
+  color: #FCF7F8;
+}
+
+.portfolio-modal-bg h3 {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
+.portfolio-modal-bg .fa-circle-xmark {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.portfolio-modal-bg .project-text {
+  font-weight: 100;
+  height: 120px;
+  overflow: scroll;
+}
+
+/* width */
+.project-text::-webkit-scrollbar {
+  width: 4px;
+  height: 0;
+}
+
+/* Track */
+.project-text::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+.project-text::-webkit-scrollbar-thumb {
+  background: #FCF7F8;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+.project-text::-webkit-scrollbar-thumb:hover {
+  background: #331E36;
+}
+
+.portfolio-modal-bg video {
+  width: 200px;
+  height: 160px;
+  object-fit: cover;
+  object-position: 0% 0%;
+}
+
+.portfolio-nav {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.fa-circle-chevron-right, .fa-circle-chevron-left {
+  font-size: 2rem;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.project-links a {
+  text-decoration: none;
+  color: #6EA4BF;
+  font-weight: 100;
+  padding-bottom: 0.3rem;
+}
+
 /* ------------------ CONTACT ------------------ */
