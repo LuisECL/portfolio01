@@ -46,11 +46,11 @@ nav img {
   color: #fff;
 }
 
-.page-content {
+main {
   margin-top: 60px;
 }
 
-.page-content section {
+main section {
   padding: 0 20px;
 }
 
@@ -296,7 +296,7 @@ h1 {
 section h2 {
   color: #1A535C;
   font-size: 3rem;
-  font-weight: 100;
+  font-weight: 400;
   padding: 20px 0;
 }
 
@@ -536,6 +536,7 @@ section h2 {
 
 /* -------------- PORTFOLIO-MODAL -------------- */
 .portfolio-modal-container {
+  display: none;
   position: fixed;
   top: 60px;
   height: calc(100vh - 60px);
