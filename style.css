@@ -698,3 +698,28 @@ form button {
   font-size: 1rem;
   font-weight: 100;
 }
+
+/* ------------------ CONTACT ------------------ */
+footer {
+  width: 100%;
+  height: 60px;
+  margin-top: 2rem;
+  padding: 0 1.5rem;
+  background-color: #331E36;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  color: #FCF7F8;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.7rem;
+  font-weight: 100;
+}
+
+footer i {
+  color: #FCF7F8;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
