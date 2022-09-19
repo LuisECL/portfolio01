@@ -397,6 +397,30 @@ section h2 {
   margin-left: 1rem;
 }
 
+.skills-click-sign {
+  position: absolute;
+  top: 8vh;
+  right: 8vw;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.skills-click-sign p {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #6EA4BF;
+}
+
+.skills-click-sign .fa-arrow-down {
+  font-size: 1.5rem;
+  animation: point-down 1.5s infinite;
+  color: #6EA4BF;
+}
+
 .card {
   position: relative;
   width: 100%;
@@ -406,7 +430,7 @@ section h2 {
 }
 
 .card:not(:last-of-type) {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .card.card-active {
