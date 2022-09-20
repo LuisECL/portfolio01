@@ -118,6 +118,5 @@ for (const img of aboutImgs){
     const focusedAnchor = aboutAnchors.find(anchor => anchor.id == anchorID)
 
     focusOnImg(focusedAnchor, img)
-    console.log(anchorID);
   })
 };

@@ -410,6 +410,7 @@ section h2 {
   text-decoration: none;
   color: #1A535C;
   font-weight: 600;
+  transition: all .3s;
 }
 
 .about-anchor.active {
@@ -434,6 +435,7 @@ section h2 {
   width: 100px;
   height: 100px;
   opacity: 50%;
+  transition: all .3s;
 }
 
 .about-grid img.about-img-active {
