@@ -175,9 +175,39 @@ main section {
 }
 
 .languages {
-  /* opacity: 0; */
+  overflow: hidden;
+}
+
+.languages ul {
+  display: none;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
+}
+
+.languages ul.active {
+  display: block;
+}
+
+@keyframes show-languages {
+  0%{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes hide-languages {
+  0%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
 }
 
 .languages img {

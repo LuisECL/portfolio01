@@ -69,3 +69,19 @@ logoBtn.addEventListener("click", ()=> {
     hideNavModal();
   }
 });
+
+// Show/hide language options -------|
+const activeLng = document.getElementById("lang-active");
+const languageList = document.querySelector(".languages ul");
+
+activeLng.addEventListener("click", ()=> {
+  if (languageList.classList.contains("active")){
+    languageList.style.animation = "hide-languages 0.5s ease 1"
+    setTimeout(()=> {
+      languageList.classList.remove("active")
+    }, 450)
+  } else {
+    languageList.classList.add("active")
+    languageList.style.animation = "show-languages 0.5s ease 1"
+  }
+});
