@@ -119,8 +119,12 @@ main section {
   color: #fff;
 }
 
-.nav-modal-container .nav-modal-active {
+.nav-modal-btn.active {
   background: #fff;
+  color: #220F24;
+}
+
+.nav-modal-icon.active {
   color: #220F24;
 }
 
