@@ -215,16 +215,19 @@ main section {
   margin-right: 0.5rem;
 }
 
-.lang-container li {
+.lang-container a {
   width: 100%;
   list-style-type: none;
   padding: 0.25rem 0;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
-.languages span {
+.languages a {
   font-family: 'Source Code Pro', monospace;
+  text-decoration: none;
+  color: #331E36;
 }
 
 .home-text{
