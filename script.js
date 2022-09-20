@@ -120,3 +120,42 @@ for (const img of aboutImgs){
     focusOnImg(focusedAnchor, img)
   })
 };
+
+// Toggle Skills cards and icon ---------- |
+const skillsHeader = document.querySelector(".skills-header");
+const skillsCards = Array.from(document.querySelectorAll(".card"));
+const frontEndIcon = `fa-brands fa-react`
+const backEndIcon = `fa-brands fa-node-js`
+const languagesIcon = `fa-regular fa-earth-americas`
+const softSkillsIcon = `fa-regular fa-handshake-angle`
+const skillsIcons = {frontEndIcon, backEndIcon, languagesIcon, softSkillsIcon}
+
+function flipCard(focusedCard){
+  const focusedCardIcon = focusedCard.id + "Icon"
+  for (const card of skillsCards){
+    card.classList.remove("card-active");
+  }
+  focusedCard.classList.add("card-active");
+  skillsHeader.innerHTML =
+  `<h2>Skills</h2>
+  <i class="${skillsIcons[focusedCardIcon]}"></i>`
+};
+
+function resetCards(){
+  for (const card of skillsCards){
+    card.classList.remove("card-active");
+  }
+  skillsHeader.innerHTML =
+  `<h2>Skills</h2>
+  <i class="fa-solid fa-pen-to-square"></i>`
+};
+
+for (const card of skillsCards) {
+  card.addEventListener("click", ()=> {
+    if(card.classList.contains("card-active")){
+      resetCards();
+    } else {
+      flipCard(card);
+    }
+  })
+};

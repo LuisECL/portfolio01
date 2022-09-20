@@ -472,6 +472,7 @@ section h2 {
   font-size: 2.5rem;
   font-weight: 100;
   margin-left: 1rem;
+  font-family: 'FontAwesome' !important;
 }
 
 .skills-click-sign {
