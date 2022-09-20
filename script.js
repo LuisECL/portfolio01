@@ -85,3 +85,39 @@ activeLng.addEventListener("click", ()=> {
     languageList.style.animation = "show-languages 0.5s ease 1"
   }
 });
+
+// Focus "About me" grid images ---------|
+const aboutAnchors = Array.from(document.querySelectorAll(".about-text a"));
+const aboutImgs = Array.from(document.querySelectorAll(".about-grid img"));
+
+function focusOnImg(focusedAnchor, focusedImg){
+  for (const img of aboutImgs){
+    img.classList.remove("about-img-active")
+  }
+  focusedImg.classList.add("about-img-active");
+
+  for (const anchor of aboutAnchors){
+    anchor.classList.remove("active");
+  }
+  focusedAnchor.classList.add("active")
+};
+
+for (const anchor of aboutAnchors){
+  anchor.addEventListener("click", (e)=> {
+    e.preventDefault();
+    const imgID = `img-${anchor.id}`
+    const focusedImg = aboutImgs.find(img => img.id == imgID)
+
+    focusOnImg(anchor, focusedImg);
+  })
+};
+
+for (const img of aboutImgs){
+  img.addEventListener("click", ()=> {
+    const anchorID = img.id.split("-")[1]
+    const focusedAnchor = aboutAnchors.find(anchor => anchor.id == anchorID)
+
+    focusOnImg(focusedAnchor, img)
+    console.log(anchorID);
+  })
+};

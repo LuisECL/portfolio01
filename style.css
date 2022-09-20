@@ -218,7 +218,7 @@ main section {
 .lang-container a {
   width: 100%;
   list-style-type: none;
-  padding: 0.25rem 0;
+  padding: 0.4rem 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -406,10 +406,14 @@ section h2 {
   margin-bottom: 1.5rem;
 }
 
-.about-text a {
+.about-anchor {
   text-decoration: none;
   color: #1A535C;
   font-weight: 600;
+}
+
+.about-anchor.active {
+  color: #6EA4BF;
 }
 
 .about-grid {
