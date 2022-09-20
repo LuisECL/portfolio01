@@ -5,26 +5,26 @@ const mobileNavBar = document.querySelector(".nav-modal-container");
 function hideNavModal() {
   mobileNavBar.classList.remove("show");
   mobileNavBar.classList.add("hide");
-  setTimeout(()=> {
+  setTimeout(() => {
     mobileNavBar.classList.remove("hide");
   }, 1000);
 }
 
-function showNavModal () {
-  if (mobileNavBar.classList.contains("show")){
+function showNavModal() {
+  if (mobileNavBar.classList.contains("show")) {
     hideNavModal();
   } else {
-    mobileNavBar.classList.add("show")
+    mobileNavBar.classList.add("show");
   }
-};
+}
 
-hambBtn.addEventListener("click", (e)=> {
+hambBtn.addEventListener("click", (e) => {
   e.preventDefault();
   showNavModal();
 });
 
 // Scroll with Mobile NavBar buttons -------|
-const logoBtn = document.querySelector("nav img")
+const logoBtn = document.querySelector("nav img");
 const navBarBtns = document.querySelectorAll(".nav-modal-container button");
 const navBarIcons = document.querySelectorAll(".nav-modal-container ul i");
 const pageSections = document.querySelectorAll("section");
@@ -37,35 +37,35 @@ function scrollToSection(sectionId) {
 
   window.scrollTo({
     top: offsetPosition,
-    behavior: "smooth"
-  })
-};
+    behavior: "smooth",
+  });
+}
 
-function styleMobileNavBtns(index){
+function styleMobileNavBtns(index) {
   navBarBtns[index].classList.add("active");
   navBarIcons[index].classList.add("active");
 
-  setTimeout(()=> {
-    for (let btn of navBarBtns){
-      btn.classList.remove("active")
+  setTimeout(() => {
+    for (let btn of navBarBtns) {
+      btn.classList.remove("active");
     }
-    for (icon of navBarIcons){
-      icon.classList.remove("active")
+    for (icon of navBarIcons) {
+      icon.classList.remove("active");
     }
-  }, 1000)
+  }, 1000);
 }
 
 navBarBtns.forEach((btn, index) => {
-  btn.addEventListener("click", ()=> {
+  btn.addEventListener("click", () => {
     scrollToSection(index + 1);
     hideNavModal();
     styleMobileNavBtns(index);
-  })
+  });
 });
 
-logoBtn.addEventListener("click", ()=> {
-  scrollToSection(0)
-  if (mobileNavBar.classList.contains("show")){
+logoBtn.addEventListener("click", () => {
+  scrollToSection(0);
+  if (mobileNavBar.classList.contains("show")) {
     hideNavModal();
   }
 });
@@ -74,15 +74,15 @@ logoBtn.addEventListener("click", ()=> {
 const activeLng = document.getElementById("lang-active");
 const languageList = document.querySelector(".languages ul");
 
-activeLng.addEventListener("click", ()=> {
-  if (languageList.classList.contains("active")){
-    languageList.style.animation = "hide-languages 0.5s ease 1"
-    setTimeout(()=> {
-      languageList.classList.remove("active")
-    }, 450)
+activeLng.addEventListener("click", () => {
+  if (languageList.classList.contains("active")) {
+    languageList.style.animation = "hide-languages 0.5s ease 1";
+    setTimeout(() => {
+      languageList.classList.remove("active");
+    }, 450);
   } else {
-    languageList.classList.add("active")
-    languageList.style.animation = "show-languages 0.5s ease 1"
+    languageList.classList.add("active");
+    languageList.style.animation = "show-languages 0.5s ease 1";
   }
 });
 
@@ -90,72 +90,196 @@ activeLng.addEventListener("click", ()=> {
 const aboutAnchors = Array.from(document.querySelectorAll(".about-text a"));
 const aboutImgs = Array.from(document.querySelectorAll(".about-grid img"));
 
-function focusOnImg(focusedAnchor, focusedImg){
-  for (const img of aboutImgs){
-    img.classList.remove("about-img-active")
+function focusOnImg(focusedAnchor, focusedImg) {
+  for (const img of aboutImgs) {
+    img.classList.remove("about-img-active");
   }
   focusedImg.classList.add("about-img-active");
 
-  for (const anchor of aboutAnchors){
+  for (const anchor of aboutAnchors) {
     anchor.classList.remove("active");
   }
-  focusedAnchor.classList.add("active")
-};
+  focusedAnchor.classList.add("active");
+}
 
-for (const anchor of aboutAnchors){
-  anchor.addEventListener("click", (e)=> {
+for (const anchor of aboutAnchors) {
+  anchor.addEventListener("click", (e) => {
     e.preventDefault();
-    const imgID = `img-${anchor.id}`
-    const focusedImg = aboutImgs.find(img => img.id == imgID)
+    const imgID = `img-${anchor.id}`;
+    const focusedImg = aboutImgs.find((img) => img.id == imgID);
 
     focusOnImg(anchor, focusedImg);
-  })
-};
+  });
+}
 
-for (const img of aboutImgs){
-  img.addEventListener("click", ()=> {
-    const anchorID = img.id.split("-")[1]
-    const focusedAnchor = aboutAnchors.find(anchor => anchor.id == anchorID)
+for (const img of aboutImgs) {
+  img.addEventListener("click", () => {
+    const anchorID = img.id.split("-")[1];
+    const focusedAnchor = aboutAnchors.find((anchor) => anchor.id == anchorID);
 
-    focusOnImg(focusedAnchor, img)
-  })
-};
+    focusOnImg(focusedAnchor, img);
+  });
+}
 
 // Toggle Skills cards and icon ---------- |
 const skillsHeader = document.querySelector(".skills-header");
-const skillsCards = Array.from(document.querySelectorAll(".card"));
-const frontEndIcon = `fa-brands fa-react`
-const backEndIcon = `fa-brands fa-node-js`
-const languagesIcon = `fa-regular fa-earth-americas`
-const softSkillsIcon = `fa-regular fa-handshake-angle`
-const skillsIcons = {frontEndIcon, backEndIcon, languagesIcon, softSkillsIcon}
+const skillsCards = document.querySelectorAll(".card");
+const frontEndIcon = `fa-brands fa-react`;
+const backEndIcon = `fa-brands fa-node-js`;
+const languagesIcon = `fa-regular fa-earth-americas`;
+const softSkillsIcon = `fa-regular fa-handshake-angle`;
+const skillsIcons = {
+  frontEndIcon,
+  backEndIcon,
+  languagesIcon,
+  softSkillsIcon,
+};
 
-function flipCard(focusedCard){
-  const focusedCardIcon = focusedCard.id + "Icon"
-  for (const card of skillsCards){
+function flipCard(focusedCard) {
+  const focusedCardIcon = focusedCard.id + "Icon";
+  for (const card of skillsCards) {
     card.classList.remove("card-active");
   }
   focusedCard.classList.add("card-active");
-  skillsHeader.innerHTML =
-  `<h2>Skills</h2>
-  <i class="${skillsIcons[focusedCardIcon]}"></i>`
-};
+  skillsHeader.innerHTML = `<h2>Skills</h2>
+  <i class="${skillsIcons[focusedCardIcon]}"></i>`;
+}
 
-function resetCards(){
-  for (const card of skillsCards){
+function resetCards() {
+  for (const card of skillsCards) {
     card.classList.remove("card-active");
   }
-  skillsHeader.innerHTML =
-  `<h2>Skills</h2>
-  <i class="fa-solid fa-pen-to-square"></i>`
-};
+  skillsHeader.innerHTML = `<h2>Skills</h2>
+  <i class="fa-solid fa-pen-to-square"></i>`;
+}
 
 for (const card of skillsCards) {
-  card.addEventListener("click", ()=> {
-    if(card.classList.contains("card-active")){
+  card.addEventListener("click", () => {
+    if (card.classList.contains("card-active")) {
       resetCards();
     } else {
       flipCard(card);
     }
-  })
+  });
+}
+
+// Show Portfolio modal and navigate ---------|
+const projectContainers = document.querySelectorAll(".project-container");
+const portfolioModal = document.querySelector(".portfolio-modal-container");
+
+const projectsInfo = {
+  cl73: {
+    index: 0,
+    video: `img/portfolio/cl73.mp4`,
+    name: "Café Lima 73",
+    description: `CL73 is a static website developed in the style of a "brochure web page" for the fictional Coffe place Café Lima 73. Its design is fully responsive and allows for visualization in large monitors, tablets and mobile devices.`,
+    website: `https://luisecl.github.io/CL73/`,
+    repository: `https://github.com/LuisECL/CL73`,
+  },
+  tvPlus: {
+    index: 1,
+    video: `img/portfolio/tv-plus.mp4`,
+    name: "TV Plus",
+    description:
+      "TV+ is a SPA developed to search for information about movies, tv shows, videogames or music videos. It's responsive design allows you to use it on large screens, tablets and mobile devices.",
+    website: `https://tv-plus.herokuapp.com/`,
+    repository: `https://github.com/LuisECL/tv_plus`,
+  },
+  kingsLockdown: {
+    index: 2,
+    video: `img/portfolio/kings-lockdown.mp4`,
+    name: "King's Lockdown",
+    description:
+      "SPA developed to showcase drummer Oscar Barcelli's album King's Lockdown (2021) for Best Latin Jazz Album consideration for the Latin Grammy Awards.",
+    website: `https://powerful-beyond-84068.herokuapp.com/`,
+    repository: `https://github.com/LuisECL/kings_lockdown`,
+  },
 };
+const projectsInfoKeys = Object.keys(projectsInfo);
+
+function findNextProject(index){
+  let nextIndex = index + 1
+  let nextProject = ""
+  for (project in projectsInfo){
+    if(projectsInfo[project].index == nextIndex){
+      nextProject = project
+    }
+  }
+  return nextProject
+};
+
+function findPreviousProject(index){
+  let prevIndex = index - 1
+  let prevProject = ""
+  for (project in projectsInfo){
+    if(projectsInfo[project].index == prevIndex){
+      prevProject = project
+    }
+  }
+  return prevProject
+};
+
+function showProjectInfo(project) {
+  portfolioModal.style.display = "block";
+  portfolioModal.innerHTML = `
+  <div class="portfolio-modal-bg">
+      <h3>${projectsInfo[project].name}</h3>
+      <i class="fa-solid fa-circle-xmark"></i>
+      <div class="project-text">
+        <p>${projectsInfo[project].description}</p>
+      </div>
+      <video src="${projectsInfo[project].video}" autoplay loop>
+        Your browser does not support the video tag
+      </video>
+      <div class="portfolio-nav">
+        <div class="prev-project">
+          <i class="fa-solid fa-circle-chevron-left"></i>
+          <p>Prev</p>
+        </div>
+        <div class="next-project">
+          <i class="fa-solid fa-circle-chevron-right"></i>
+          <p>Next</p>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="${projectsInfo[project].website}" target="blank">Website</a>
+        <a href="${projectsInfo[project].repository}" target="blank">Repository</a>
+      </div>
+    </div>`;
+
+  let closePortfolioBtn = document.querySelector(".portfolio-modal-bg i");
+  closePortfolioBtn.addEventListener("click", () => {
+    portfolioModal.style.display = "none";
+  });
+
+  let prevBtn = document.querySelector(".prev-project");
+  let nextBtn = document.querySelector(".next-project");
+  let projectIndex = projectsInfo[project].index
+  let nextProject = findNextProject(projectIndex);
+  let prevProject = findPreviousProject(projectIndex);
+
+  if(projectIndex == 0){
+    prevBtn.style.opacity = "0";
+    nextBtn.addEventListener("click", ()=> {
+      showProjectInfo(nextProject);
+    });
+  } else if (projectIndex == projectsInfoKeys.length - 1){
+    nextBtn.style.opacity = "0"
+    prevBtn.addEventListener("click", ()=> {
+      showProjectInfo(prevProject);
+    });
+  } else {
+    prevBtn.addEventListener("click", ()=> {
+      showProjectInfo(prevProject);
+    });
+    nextBtn.addEventListener("click", ()=> {
+      showProjectInfo(nextProject);
+    });
+  }
+};
+
+projectContainers.forEach((project, index) => {
+  project.addEventListener("click", () => {
+    showProjectInfo(project.id);
+  });
+});

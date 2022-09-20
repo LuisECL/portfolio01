@@ -646,6 +646,10 @@ section h2 {
   margin-bottom: 1rem;
 }
 
+.close-potfolio-btn {
+  z-index: 10;
+}
+
 .portfolio-modal-bg .fa-circle-xmark {
   position: absolute;
   top: 0.5rem;
