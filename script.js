@@ -283,3 +283,75 @@ projectContainers.forEach((project, index) => {
     showProjectInfo(project.id);
   });
 });
+
+// Validate Contact form...
+const contactForm = document.querySelector(".contact-container form")
+const emailInput = document.getElementById("email");
+const subjectInput = document.getElementById("subject");
+const emailMessage = document.getElementById("email-message");
+
+    // ...email input
+emailInput.addEventListener("focus", ()=> {
+  emailInput.classList.remove("invalid");
+  emailInput.classList.remove("valid");
+  emailInput.classList.add("focus");
+})
+emailInput.addEventListener("blur", ()=> {
+  if (emailInput.value.includes("@") && emailInput.value.includes(".com")){
+    emailInput.classList.remove("invalid");
+    emailInput.classList.add("valid");
+
+  } else {
+    emailInput.classList.remove("valid");
+    emailInput.classList.add("invalid");
+    alert("Please inform a valid email")
+  }
+});
+
+    // ...subject input
+subjectInput.addEventListener("focus", ()=> {
+  subjectInput.classList.remove("valid");
+  subjectInput.classList.add("focus");
+});
+subjectInput.addEventListener("focusout", ()=> {
+  subjectInput.classList.remove("focus");
+});
+subjectInput.addEventListener("blur", ()=> {
+  if (subjectInput.value != ""){
+    subjectInput.classList.add("valid");
+  } else {
+    subjectInput.classList.remove("valid");
+  }
+});
+
+    // ...email message
+emailMessage.addEventListener("focus", ()=> {
+  emailMessage.classList.remove("valid");
+  emailMessage.classList.add("focus");
+});
+emailMessage.addEventListener("focusout", ()=> {
+  emailMessage.classList.remove("focus");
+});
+emailMessage.addEventListener("blur", ()=> {
+  if (emailMessage.value != ""){
+    emailMessage.classList.add("valid");
+  } else {
+    emailMessage.classList.remove("valid");
+  }
+});
+
+contactForm.addEventListener("submit", (e)=> {
+  if(emailInput.value == "" && emailMessage.value == ""){
+   e.preventDefault();
+   alert("Don't forget to fill up the form");
+   return
+  } else if(emailInput.value == ""){
+    e.preventDefault();
+    alert("Don't forget to write your email address");
+  } else if (emailMessage.value == ""){
+    e.preventDefault();
+    alert("Don't forget to write your message");
+  } else {
+    return
+  }
+})
