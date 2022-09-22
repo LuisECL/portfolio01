@@ -287,7 +287,7 @@ projectContainers.forEach((project, index) => {
 // Validate Contact form...
 const contactForm = document.querySelector(".contact-container form")
 const emailInput = document.getElementById("email");
-const subjectInput = document.getElementById("subject");
+// const subjectInput = document.getElementById("subject");
 const emailMessage = document.getElementById("email-message");
 
     // ...email input
@@ -309,20 +309,20 @@ emailInput.addEventListener("blur", ()=> {
 });
 
     // ...subject input
-subjectInput.addEventListener("focus", ()=> {
-  subjectInput.classList.remove("valid");
-  subjectInput.classList.add("focus");
-});
-subjectInput.addEventListener("focusout", ()=> {
-  subjectInput.classList.remove("focus");
-});
-subjectInput.addEventListener("blur", ()=> {
-  if (subjectInput.value != ""){
-    subjectInput.classList.add("valid");
-  } else {
-    subjectInput.classList.remove("valid");
-  }
-});
+// subjectInput.addEventListener("focus", ()=> {
+//   subjectInput.classList.remove("valid");
+//   subjectInput.classList.add("focus");
+// });
+// subjectInput.addEventListener("focusout", ()=> {
+//   subjectInput.classList.remove("focus");
+// });
+// subjectInput.addEventListener("blur", ()=> {
+//   if (subjectInput.value != ""){
+//     subjectInput.classList.add("valid");
+//   } else {
+//     subjectInput.classList.remove("valid");
+//   }
+// });
 
     // ...email message
 emailMessage.addEventListener("focus", ()=> {
