@@ -71,7 +71,8 @@ main section {
 }
 
 .nav-modal-container.show {
-  display: block;
+  display: flex;
+  flex-direction: column;
   animation: show-nav-modal 1s ease 1;
 }
 
@@ -103,7 +104,7 @@ main section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 85%;
+  flex-grow: 8;
 }
 
 .nav-modal-container li {
@@ -135,6 +136,7 @@ main section {
 }
 
 .nav-modal-container .credits {
+  flex-grow: 2;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -142,13 +144,18 @@ main section {
 }
 
 .credits p {
-  height: 100%;
   font-family: 'Source Code Pro', monospace;
   font-size: 0.7rem;
 }
 
+.credits a {
+  text-decoration: none;
+}
+
 .credits i {
   color: #fff;
+  font-size: 1.5rem;
+  padding: 0.3rem;
 }
 
 /* ------------------ HOME ------------------ */
@@ -842,6 +849,10 @@ footer p {
   font-family: 'Source Code Pro', monospace;
   font-size: 0.7rem;
   font-weight: 100;
+}
+
+footer a {
+  text-decoration: none;
 }
 
 footer i {
