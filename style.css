@@ -44,7 +44,7 @@ nav img {
 }
 
 nav img.center {
-  transform: translateX(70%);
+  transform: translateX(calc(50vw - 128px));
 }
 
 .nav-title {
