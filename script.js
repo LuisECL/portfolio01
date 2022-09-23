@@ -1,20 +1,38 @@
 // Show/Hide Mobile NavBar ---------------------|
 const hambBtn = document.querySelector("nav > a");
 const mobileNavBar = document.querySelector(".nav-modal-container");
+const navName = document.querySelector(".nav-title h4");
+const navWebDev = document.querySelector(".nav-title p");
+const navLogo = document.querySelector("nav img")
 
 function hideNavModal() {
+  navName.style.transitionDelay = ".4s"
+  navWebDev.style.transitionDelay = "0s"
+
   mobileNavBar.classList.remove("show");
   mobileNavBar.classList.add("hide");
+  navWebDev.classList.remove("show");
+  navName.classList.remove("show");
+  navLogo.classList.remove("center");
+
   setTimeout(() => {
     mobileNavBar.classList.remove("hide");
+    navName.style.transitionDelay = "0s"
+    navWebDev.style.transitionDelay = ".6s"
   }, 1000);
 }
 
 function showNavModal() {
+  navName.style.transitionDelay = "0s"
+  navWebDev.style.transitionDelay = ".6s"
+
   if (mobileNavBar.classList.contains("show")) {
     hideNavModal();
   } else {
     mobileNavBar.classList.add("show");
+    navName.classList.add("show");
+    navWebDev.classList.add("show");
+    navLogo.classList.add("center");
   }
 }
 
