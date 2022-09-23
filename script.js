@@ -193,7 +193,7 @@ const projectsInfo = {
     image: "img/portfolio/cl73.jpg",
     video: `img/portfolio/cl73.mp4`,
     website: `https://luisecl.github.io/CL73/`,
-    repository: `https://github.com/LuisECL/CL73`,
+    repository: `https://github.com/LuisECL/CL73`
   },
   tvPlus: {
     name: "TV Plus",
@@ -202,7 +202,7 @@ const projectsInfo = {
     image: "img/portfolio/tv-plus.jpg",
     video: `img/portfolio/tv-plus.mp4`,
     website: `https://tv-plus.herokuapp.com/`,
-    repository: `https://github.com/LuisECL/tv_plus`,
+    repository: `https://github.com/LuisECL/tv_plus`
   },
   kingsLockdown: {
     name: "King's Lockdown",
@@ -211,8 +211,26 @@ const projectsInfo = {
     image: "img/portfolio/kings-lockdown.jpg",
     video: `img/portfolio/kings-lockdown.mp4`,
     website: `https://powerful-beyond-84068.herokuapp.com/`,
-    repository: `https://github.com/LuisECL/kings_lockdown`,
+    repository: `https://github.com/LuisECL/kings_lockdown`
   },
+  todoList: {
+    name: "Todo list",
+    description:
+      "Todo list built with React. This project was made following Dev Ed's video Build a Todo App with REACT available on YouTube",
+    image: "img/portfolio/todo-list.jpg",
+    video: `img/portfolio/todo-list.mp4`,
+    website: ``,
+    repository: `https://github.com/LuisECL/todo_list_react`
+  },
+  calculator: {
+    name: "Simple Calculator",
+    description:
+      "This app works as a simple calculator, allowing the user to perform any of the main 4 calculations (add, subtract, multiply, divide), using both whole and decimal numbers.",
+    image: "img/portfolio/simple-calculator.jpg",
+    video: `img/portfolio/simple-calculator.mp4`,
+    website: `https://luisecl.github.io/simple-calculator/`,
+    repository: `https://github.com/LuisECL/simple-calculator`
+  }
 };
 const projectsInfoKeys = Object.keys(projectsInfo);
 let projectIndex = 0;
