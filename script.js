@@ -3,11 +3,11 @@ const hambBtn = document.querySelector("nav > a");
 const mobileNavBar = document.querySelector(".nav-modal-container");
 const navName = document.querySelector(".nav-title h4");
 const navWebDev = document.querySelector(".nav-title p");
-const navLogo = document.querySelector("nav img")
+const navLogo = document.querySelector("nav img");
 
 function hideNavModal() {
-  navName.style.transitionDelay = ".4s"
-  navWebDev.style.transitionDelay = "0s"
+  navName.style.transitionDelay = ".4s";
+  navWebDev.style.transitionDelay = "0s";
 
   mobileNavBar.classList.remove("show");
   mobileNavBar.classList.add("hide");
@@ -17,14 +17,14 @@ function hideNavModal() {
 
   setTimeout(() => {
     mobileNavBar.classList.remove("hide");
-    navName.style.transitionDelay = "0s"
-    navWebDev.style.transitionDelay = ".6s"
+    navName.style.transitionDelay = "0s";
+    navWebDev.style.transitionDelay = ".6s";
   }, 800);
 }
 
 function showNavModal() {
-  navName.style.transitionDelay = "0s"
-  navWebDev.style.transitionDelay = ".6s"
+  navName.style.transitionDelay = "0s";
+  navWebDev.style.transitionDelay = ".6s";
 
   if (mobileNavBar.classList.contains("show")) {
     hideNavModal();
@@ -181,61 +181,91 @@ for (const card of skillsCards) {
   });
 }
 
-// Show Portfolio modal and navigate ---------|
-const projectContainers = document.querySelectorAll(".project-container");
-const portfolioModal = document.querySelector(".portfolio-modal-container");
-
+// Dynamic Portfolio rendering ---------------|
+const portfolioProjectsContainer = document.querySelector(
+  ".portfolio-projects-container"
+);
+let projectContainers
 const projectsInfo = {
   cl73: {
-    index: 0,
-    video: `img/portfolio/cl73.mp4`,
     name: "Café Lima 73",
     description: `CL73 is a static website developed in the style of a "brochure web page" for the fictional Coffe place Café Lima 73. Its design is fully responsive and allows for visualization in large monitors, tablets and mobile devices.`,
+    image: "img/portfolio/cl73.jpg",
+    video: `img/portfolio/cl73.mp4`,
     website: `https://luisecl.github.io/CL73/`,
     repository: `https://github.com/LuisECL/CL73`,
   },
   tvPlus: {
-    index: 1,
-    video: `img/portfolio/tv-plus.mp4`,
     name: "TV Plus",
     description:
       "TV+ is a SPA developed to search for information about movies, tv shows, videogames or music videos. It's responsive design allows you to use it on large screens, tablets and mobile devices.",
+    image: "img/portfolio/tv-plus.jpg",
+    video: `img/portfolio/tv-plus.mp4`,
     website: `https://tv-plus.herokuapp.com/`,
     repository: `https://github.com/LuisECL/tv_plus`,
   },
   kingsLockdown: {
-    index: 2,
-    video: `img/portfolio/kings-lockdown.mp4`,
     name: "King's Lockdown",
     description:
       "SPA developed to showcase drummer Oscar Barcelli's album King's Lockdown (2021) for Best Latin Jazz Album consideration for the Latin Grammy Awards.",
+    image: "img/portfolio/kings-lockdown.jpg",
+    video: `img/portfolio/kings-lockdown.mp4`,
     website: `https://powerful-beyond-84068.herokuapp.com/`,
     repository: `https://github.com/LuisECL/kings_lockdown`,
   },
 };
 const projectsInfoKeys = Object.keys(projectsInfo);
+let projectIndex = 0;
+projectsInfoKeys.forEach((key) => {
+  projectsInfo[key].index = projectIndex;
+  projectIndex++;
+});
 
-function findNextProject(index){
-  let nextIndex = index + 1
-  let nextProject = ""
-  for (project in projectsInfo){
-    if(projectsInfo[project].index == nextIndex){
-      nextProject = project
+function renderProjects() {
+  projectsInfoKeys.forEach((project) => {
+    const li = document.createElement("li");
+    const img = document.createElement("img");
+    const h3 = document.createElement("h3");
+
+    li.classList.add("project-container");
+    img.src = projectsInfo[project].image;
+    img.alt = `${projectsInfo[project].name} image`;
+    h3.innerText = projectsInfo[project].name;
+    li.appendChild(img);
+    li.appendChild(h3);
+
+    portfolioProjectsContainer.appendChild(li);
+  });
+
+  projectContainers = document.querySelectorAll(".project-container");
+}
+
+renderProjects();
+
+// Show Portfolio modal and navigate ---------|
+const portfolioModal = document.querySelector(".portfolio-modal-container");
+
+function findNextProject(index) {
+  let nextIndex = index + 1;
+  let nextProject = "";
+  for (project in projectsInfo) {
+    if (projectsInfo[project].index == nextIndex) {
+      nextProject = project;
     }
   }
-  return nextProject
-};
+  return nextProject;
+}
 
-function findPreviousProject(index){
-  let prevIndex = index - 1
-  let prevProject = ""
-  for (project in projectsInfo){
-    if(projectsInfo[project].index == prevIndex){
-      prevProject = project
+function findPreviousProject(index) {
+  let prevIndex = index - 1;
+  let prevProject = "";
+  for (project in projectsInfo) {
+    if (projectsInfo[project].index == prevIndex) {
+      prevProject = project;
     }
   }
-  return prevProject
-};
+  return prevProject;
+}
 
 function showProjectInfo(project) {
   portfolioModal.style.display = "block";
@@ -272,30 +302,31 @@ function showProjectInfo(project) {
 
   let prevBtn = document.querySelector(".prev-project");
   let nextBtn = document.querySelector(".next-project");
-  let projectIndex = projectsInfo[project].index
+  let projectIndex = projectsInfo[project].index;
   let nextProject = findNextProject(projectIndex);
   let prevProject = findPreviousProject(projectIndex);
 
-  if(projectIndex == 0){
+  if (projectIndex == 0) {
     prevBtn.style.opacity = "0";
-    nextBtn.addEventListener("click", ()=> {
+    nextBtn.addEventListener("click", () => {
       showProjectInfo(nextProject);
     });
-  } else if (projectIndex == projectsInfoKeys.length - 1){
-    nextBtn.style.opacity = "0"
-    prevBtn.addEventListener("click", ()=> {
+  } else if (projectIndex == projectsInfoKeys.length - 1) {
+    nextBtn.style.opacity = "0";
+    prevBtn.addEventListener("click", () => {
       showProjectInfo(prevProject);
     });
   } else {
-    prevBtn.addEventListener("click", ()=> {
+    prevBtn.addEventListener("click", () => {
       showProjectInfo(prevProject);
     });
-    nextBtn.addEventListener("click", ()=> {
+    nextBtn.addEventListener("click", () => {
       showProjectInfo(nextProject);
     });
   }
-};
+}
 
+console.log(projectContainers);
 projectContainers.forEach((project, index) => {
   project.addEventListener("click", () => {
     showProjectInfo(project.id);
@@ -303,30 +334,29 @@ projectContainers.forEach((project, index) => {
 });
 
 // Validate Contact form...
-const contactForm = document.querySelector(".contact-container form")
+const contactForm = document.querySelector(".contact-container form");
 const emailInput = document.getElementById("email");
 // const subjectInput = document.getElementById("subject");
 const emailMessage = document.getElementById("email-message");
 
-    // ...email input
-emailInput.addEventListener("focus", ()=> {
+// ...email input
+emailInput.addEventListener("focus", () => {
   emailInput.classList.remove("invalid");
   emailInput.classList.remove("valid");
   emailInput.classList.add("focus");
-})
-emailInput.addEventListener("blur", ()=> {
-  if (emailInput.value.includes("@") && emailInput.value.includes(".com")){
+});
+emailInput.addEventListener("blur", () => {
+  if (emailInput.value.includes("@") && emailInput.value.includes(".com")) {
     emailInput.classList.remove("invalid");
     emailInput.classList.add("valid");
-
   } else {
     emailInput.classList.remove("valid");
     emailInput.classList.add("invalid");
-    alert("Please inform a valid email")
+    alert("Please inform a valid email");
   }
 });
 
-    // ...subject input
+// ...subject input
 // subjectInput.addEventListener("focus", ()=> {
 //   subjectInput.classList.remove("valid");
 //   subjectInput.classList.add("focus");
@@ -342,34 +372,34 @@ emailInput.addEventListener("blur", ()=> {
 //   }
 // });
 
-    // ...email message
-emailMessage.addEventListener("focus", ()=> {
+// ...email message
+emailMessage.addEventListener("focus", () => {
   emailMessage.classList.remove("valid");
   emailMessage.classList.add("focus");
 });
-emailMessage.addEventListener("focusout", ()=> {
+emailMessage.addEventListener("focusout", () => {
   emailMessage.classList.remove("focus");
 });
-emailMessage.addEventListener("blur", ()=> {
-  if (emailMessage.value != ""){
+emailMessage.addEventListener("blur", () => {
+  if (emailMessage.value != "") {
     emailMessage.classList.add("valid");
   } else {
     emailMessage.classList.remove("valid");
   }
 });
 
-contactForm.addEventListener("submit", (e)=> {
-  if(emailInput.value == "" && emailMessage.value == ""){
-   e.preventDefault();
-   alert("Don't forget to fill up the form");
-   return
-  } else if(emailInput.value == ""){
+contactForm.addEventListener("submit", (e) => {
+  if (emailInput.value == "" && emailMessage.value == "") {
+    e.preventDefault();
+    alert("Don't forget to fill up the form");
+    return;
+  } else if (emailInput.value == "") {
     e.preventDefault();
     alert("Don't forget to write your email address");
-  } else if (emailMessage.value == ""){
+  } else if (emailMessage.value == "") {
     e.preventDefault();
     alert("Don't forget to write your message");
   } else {
-    return
+    return;
   }
 });
