@@ -637,15 +637,39 @@ section h2 {
 /* ------------------ PORTFOLIO ------------------ */
 .portfolio-projects-container {
   margin-top: 1rem;
-  height: clamp(300px, 50vh, 600px);
+  height: calc(100vh - 280px);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
+  overflow-y: scroll;
+}
+
+/* width */
+.portfolio-projects-container::-webkit-scrollbar {
+  width: 4px;
+  height: 0;
+}
+
+/* Track */
+.portfolio-projects-container::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+.portfolio-projects-container::-webkit-scrollbar-thumb {
+  background: #331E36;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+.portfolio-projects-container::-webkit-scrollbar-thumb:hover {
+  background: #331E36;
 }
 
 .project-container {
   width: 100%;
-  height: 80px;
+  min-height: 80px;
+  margin: 1rem 0;
   display: flex;
   align-items: center;
   background-color: #FCF7F8;
