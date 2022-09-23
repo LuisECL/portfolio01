@@ -228,6 +228,7 @@ function renderProjects() {
     const h3 = document.createElement("h3");
 
     li.classList.add("project-container");
+    li.id = project;
     img.src = projectsInfo[project].image;
     img.alt = `${projectsInfo[project].name} image`;
     h3.innerText = projectsInfo[project].name;
@@ -326,7 +327,6 @@ function showProjectInfo(project) {
   }
 }
 
-console.log(projectContainers);
 projectContainers.forEach((project, index) => {
   project.addEventListener("click", () => {
     showProjectInfo(project.id);
