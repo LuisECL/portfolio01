@@ -19,7 +19,7 @@ function hideNavModal() {
     mobileNavBar.classList.remove("hide");
     navName.style.transitionDelay = "0s"
     navWebDev.style.transitionDelay = ".6s"
-  }, 1000);
+  }, 800);
 }
 
 function showNavModal() {

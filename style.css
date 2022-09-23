@@ -113,13 +113,13 @@ main section {
   width: 100vw;
   height: calc(100vh - 60px);
   background-color: #331E36;
-  z-index: 2;
+  z-index: 4;
 }
 
 .nav-modal-container.show {
   display: flex;
   flex-direction: column;
-  animation: show-nav-modal 1s ease 1;
+  animation: show-nav-modal .8s ease 1;
 }
 
 @keyframes show-nav-modal {
@@ -132,8 +132,9 @@ main section {
 }
 
 .nav-modal-container.hide {
-  display: block;
-  animation: hide-nav-modal 1s ease 1;
+  display: flex;
+  flex-direction: column;
+  animation: hide-nav-modal .8s ease 1;
 }
 
 @keyframes hide-nav-modal {
@@ -539,7 +540,7 @@ section h2 {
 
 .skills-click-sign {
   position: absolute;
-  top: 8vh;
+  top: 40px;
   right: 8vw;
   height: 50px;
   display: flex;
@@ -636,7 +637,7 @@ section h2 {
 /* ------------------ PORTFOLIO ------------------ */
 .portfolio-projects-container {
   margin-top: 1rem;
-  height: clamp(300px, 30vh, 600px);
+  height: clamp(300px, 50vh, 600px);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -748,11 +749,12 @@ section h2 {
 }
 
 .portfolio-modal-bg video {
-  width: 200px;
-  height: 160px;
-  margin-top: 1rem;
+  width: 90%;
+  max-height: 240px;
+  margin: 1rem 0;
   object-fit: cover;
   object-position: 0% 0%;
+  margin: auto;
 }
 
 .portfolio-nav {
@@ -779,7 +781,7 @@ section h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: auto;
 }
 
 .project-links a {
@@ -790,12 +792,17 @@ section h2 {
 }
 
 .portfolio-container .bg-text {
+  overflow: hidden;
+}
+
+.portfolio-container .bg-text p {
   transform: translate(8%, 8%);
 }
 
 /* ------------------ CONTACT ------------------ */
 section.contact-container {
   overflow: hidden;
+  min-height: auto;
 }
 
 .contact-text p {
