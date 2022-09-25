@@ -1,0 +1,13 @@
+@media (width >= 744px) {
+  nav {
+    height: 100px;
+  }
+
+  nav img {
+    max-height: 80px;
+  }
+
+  .fa-bars {
+    font-size: 3rem;
+  }
+}
