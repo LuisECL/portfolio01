@@ -98,6 +98,7 @@ nav .fa-circle-xmark {
   font-size: 2rem;
 }
 
+/* --------------- MAIN --------------- */
 main {
   margin-top: 60px;
 }
@@ -943,8 +944,11 @@ footer a {
   text-decoration: none;
 }
 
+.credits i {
+  margin-left: 0.5rem;
+}
+
 footer i {
   color: #FCF7F8;
   font-size: 1.2rem;
-  margin-left: 0.5rem;
 }

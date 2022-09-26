@@ -50,6 +50,9 @@ const pageSections = document.querySelectorAll("section");
 function scrollToSection(sectionId) {
   let section = pageSections[sectionId];
   let headerOffset = 60;
+  if(window.innerWidth >= 744){
+    headerOffset = 100;
+  }
   let sectionPosition = section.getBoundingClientRect().top;
   let offsetPosition = sectionPosition + window.pageYOffset - headerOffset;
 

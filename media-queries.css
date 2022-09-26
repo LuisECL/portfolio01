@@ -1,6 +1,8 @@
 @media (width >= 744px) {
+  /* ---------------- NAV ---------------- */
   nav {
     height: 100px;
+    padding: 0 48px;
   }
 
   nav img {
@@ -9,5 +11,301 @@
 
   .fa-bars {
     font-size: 3rem;
+  }
+
+  .nav-title {
+    transform: translateX(30px);
+  }
+
+  .nav-title h4 {
+    font-size: 2rem;
+  }
+  .nav-title p {
+    font-size: 1rem;
+  }
+
+  nav img.center {
+    transform: translate(calc(50vw - 190px));
+  }
+
+  /* ------------- NAV MODAL ------------- */
+  .nav-modal-container {
+    height: calc(100vh - 100px);
+  }
+
+  .nav-modal-container ul {
+    flex-grow: 9;
+  }
+
+  .nav-modal-container button {
+    font-size: 3rem;
+  }
+
+  .nav-modal-container .credits {
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 0 48px;
+  }
+
+  .credits p {
+    font-size: 1rem;
+  }
+
+  .credits i {
+    font-size: 2rem;
+  }
+
+  /* ------------- MAIN ------------- */
+  main {
+    margin-top: 100px;
+  }
+
+  main section {
+    padding: 0 48px;
+  }
+
+  section {
+    min-height: calc(100vh - 100px);
+  }
+
+  /* ------------- HOME ------------- */
+  .lang-container {
+    top: 48px;
+    right: 48px;
+    font-size: 1rem;
+  }
+
+  .home-text {
+    top: 15%;
+  }
+
+  .home-text h1 {
+    margin: 1rem 0;
+  }
+
+  .profile-circle-01 {
+    width: 380px;
+    height: 380px;
+    bottom: 16vh;
+    right: 8vw;
+  }
+
+  .profile-circle-02 {
+    width: 380px;
+    height: 380px;
+    margin-top: 8px;
+  }
+
+  .profile-pic {
+    width: 350px;
+    top: 16px;
+    left: 8px;
+  }
+
+  .bg-line-02 {
+    bottom: 30%;
+  }
+
+  .home-scroll-sign {
+    bottom: 4vh;
+    right: 48px;
+  }
+
+  .home-scroll-sign p {
+    font-size: 1rem;
+  }
+
+  .home-scroll-sign .fa-arrow-down {
+    font-size: 2rem;
+  }
+
+  .home-scroll-sign:last-of-type {
+    left: 48px;
+    right: auto;
+  }
+
+  /* ------------- ABOUT ------------- */
+  section h2 {
+    font-size: 5rem;
+    padding: 48px 0;
+  }
+
+  .section-text {
+    font-size: 1.2rem;
+  }
+
+  .bg-text {
+    font-size: 20rem;
+  }
+
+  .about-container .bg-text p {
+    transform: translateX(110px);
+  }
+
+  /* ------------- SKILLS ------------- */
+  .skills-header i {
+    font-size: 4rem;
+    margin-left: 2rem;
+  }
+
+  .skills-card-container {
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .skills-click-sign {
+    top: 120px;
+    right: 25vw;
+  }
+
+  .skills-click-sign p {
+    font-size: 1rem;
+  }
+
+  .card {
+    width: 260px;
+    height: 200px;
+    margin: 0 2rem;
+  }
+
+  .card-front h3 {
+    font-size: 2rem;
+  }
+
+  .card-back h4 {
+    font-size: 2rem;
+  }
+
+  .card-back li {
+    font-size: 1.2rem;
+  }
+
+  .card:nth-of-type(1) .card-back {
+    padding: 0.5rem 3rem;
+  }
+
+  .card:nth-of-type(2) .card-back {
+    padding: 0.5rem 4rem;
+  }
+
+  .card-back {
+    padding: 0.5rem 3rem;
+  }
+
+  .skills-container .bg-text {
+    bottom: 0;
+  }
+
+  /* ------------- PORTFOLIO ------------- */
+  .portfolio-projects-container {
+    height: calc(100vh - 600px);
+    margin-top: 48px;
+  }
+
+  .project-container {
+    min-height: 120px;
+    width: calc(100% - 16px);
+  }
+
+  /* width */
+  .portfolio-projects-container::-webkit-scrollbar {
+    width: 8px;
+    height: 0;
+  }
+
+  .project-container img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .project-container h3 {
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+
+  .portfolio-container .bg-text {
+    bottom: 0;
+  }
+
+  /* ------------- PORTFOLIO-MODAL ------------- */
+  .portfolio-modal-container {
+    height: calc(100vh - 100px);
+    top: 100px;
+  }
+
+  .portfolio-modal-bg {
+    height: 600px;
+    width: 648px;
+    padding: 2.5rem;
+  }
+
+  .portfolio-modal-bg h3 {
+    font-size: 3.5rem;
+    margin-right: auto;
+  }
+
+  .portfolio-modal-bg .fa-circle-xmark {
+    font-size: 3rem;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .portfolio-modal-bg .project-text {
+    font-size: 1.5rem;
+    height: 180px;
+  }
+
+  .portfolio-modal-bg video {
+    width: 320px;
+    margin: 0;
+    align-self: flex-start;
+  }
+
+  .portfolio-nav {
+    width: calc(100% - calc(320px + 2.5rem));
+    right: 0;
+    bottom: calc(20px + 2.5rem);
+  }
+
+  .portfolio-nav p {
+    font-size: 2rem;
+  }
+
+  .project-links {
+    width: calc(100% - calc(320px + 2.5rem));
+    font-size: 2rem;
+    position: absolute;
+    right: 0;
+    bottom: 200px;
+  }
+
+  .fa-circle-chevron-right,
+  .fa-circle-chevron-left {
+    font-size: 3rem;
+  }
+
+  /* ------------- CONTACT ------------- */
+  .contact-container {
+    height: calc(100vh - 220px);
+  }
+
+  form {
+    max-width: 500px;
+    margin: 2rem auto;
+    margin-top: 48px;
+  }
+
+  form button {
+    width: 180px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  /* ------------- FOOTER ------------- */
+  footer {
+    height: 100px;
+    padding: 0 48px;
   }
 }
