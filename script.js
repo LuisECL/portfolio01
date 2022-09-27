@@ -222,7 +222,7 @@ const projectsInfo = {
       "Todo list built with React. This project was made following Dev Ed's video Build a Todo App with REACT available on YouTube",
     image: "img/portfolio/todo-list.jpg",
     video: `img/portfolio/todo-list.mp4`,
-    website: ``,
+    website: `https://luisecl.github.io/todo_list_react/`,
     repository: `https://github.com/LuisECL/todo_list_react`
   },
   calculator: {
