@@ -91,6 +91,54 @@ logoBtn.addEventListener("click", () => {
   }
 });
 
+// Scroll with fixed NavBar Btns ----|
+const fixedNavBarBtns = document.querySelectorAll("nav ul button");
+const fixedNavBarIcons = document.querySelectorAll("nav ul i")
+
+fixedNavBarBtns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    scrollToSection(index + 1);
+  });
+});
+
+// Style fixed NavBar Btns on scroll |
+const pageSectionsExcHome = Array.from(
+  pageSections).filter((el, i) => i > 0);
+
+window.addEventListener("scroll", styleNavOnScroll);
+
+function styleOnlyOneBtn(i){
+  fixedNavBarBtns.forEach((btn, j) => {
+    if (i == j){
+      btn.classList.add("active")
+    } else {
+      btn.classList.remove("active")
+    }
+  });
+  fixedNavBarIcons.forEach((icon, j) => {
+    if (i == j){
+      icon.classList.add("active")
+    } else {
+      icon.classList.remove("active")
+    }
+  });
+};
+
+function styleNavOnScroll(){
+  for (let i = 0; i < pageSectionsExcHome.length; i++){
+    let windowHeight = window.innerHeight;
+    let revealTop = pageSectionsExcHome[i].getBoundingClientRect().top
+    let revealPoint = 150;
+
+    if (revealTop < windowHeight - revealPoint){
+      styleOnlyOneBtn(i)
+    } else {
+      fixedNavBarBtns[i].classList.remove("active");
+      fixedNavBarIcons[i].classList.remove("active");
+    }
+  }
+};
+
 // Show/hide language options -------|
 const activeLng = document.getElementById("lang-active");
 const languageList = document.querySelector(".languages ul");
