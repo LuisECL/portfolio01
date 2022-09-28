@@ -134,6 +134,10 @@
     font-size: 1.2rem;
   }
 
+  .about-grid {
+    width: calc(65vh - 300px);
+  }
+
   .bg-text {
     font-size: 20rem;
   }
@@ -307,5 +311,188 @@
   footer {
     height: 100px;
     padding: 0 48px;
+  }
+}
+
+@media (width >= 1000px) {
+  /* ---------------- NAV ---------------- */
+  nav > a {
+    display: none;
+  }
+
+  .nav-btns {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  .nav-btns li {
+    list-style-type: none;
+    height: 100%;
+  }
+
+  .nav-btns button {
+    height: 100%;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #fff;
+  }
+
+  .nav-btns button.active {
+    background: #fff;
+    color: #220f24;
+  }
+
+  .nav-btns button i {
+    color: #6ea4bf;
+    padding-right: 0.5rem;
+  }
+
+  /* ---------------- HOME ---------------- */
+  .home-text {
+    max-width: 500px;
+  }
+
+  .home-scroll-sign {
+    bottom: 48px;
+  }
+
+  .home-scroll-sign:last-of-type {
+    display: none;
+  }
+
+  /* ---------------- ABOUT ---------------- */
+  .about-text {
+    max-width: 550px;
+    height: 100%;
+  }
+
+  .about-grid {
+    position: absolute;
+    right: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100vw - 700px);
+  }
+
+  .bg-text {
+    bottom: 0;
+  }
+
+  .about-container .bg-text p {
+    transform: translateX(180px);
+  }
+
+  /* ---------------- SKILLS ---------------- */
+  .skills-click-sign {
+    right: 15vw;
+  }
+
+  .skills-card-container {
+    justify-content: flex-start;
+  }
+
+  .card:not(:last-of-type):not(:first-of-type) {
+    margin-left: auto;
+  }
+
+  .card:last-of-type {
+    margin-right: auto;
+  }
+
+  /* ---------------- PORTFOLIO ---------------- */
+  .portfolio-container h2 {
+    display: inline-block;
+  }
+
+  .portfolio-text {
+    position: absolute;
+    top: 60px;
+    left: 400px;
+    width: calc(100% - 590px);
+  }
+
+  .portfolio-click-sign {
+    position: absolute;
+    top:100px;
+    right: 10vw;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .portfolio-click-sign p {
+    font-family: "Source Code Pro", monospace;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #6ea4bf;
+  }
+
+  .portfolio-click-sign .fa-arrow-down {
+    font-size: 1.5rem;
+    animation: point-down 1.5s infinite;
+    color: #6ea4bf;
+  }
+
+  .portfolio-projects-container {
+    margin-top: 0;
+    height: calc(100vh - 350px);
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .project-container {
+    width: 400px;
+  }
+
+  .project-container:last-of-type {
+    margin-left: calc((100% - 800px)/4);
+    margin-right: auto;
+  }
+
+  /* ---------------- PORTFOLIO ---------------- */
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+
+  .contact-container h2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .contact-text {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .contact-container form {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    align-self: center;
+    max-width: none;
+    max-height: none;
+    width: 90%;
+    height: 100%;
+    margin: 0;
+    margin-left: 2rem;
+    padding-top: 96px;
+    padding-bottom: 1rem;
+  }
+
+  form textarea {
+    height: 100%;
+  }
+
+  .contact-container .bg-text {
+    bottom: 2vh;
   }
 }

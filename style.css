@@ -37,6 +37,10 @@ nav {
   z-index: 10;
 }
 
+.nav-btns {
+  display: none;
+}
+
 nav img {
   max-height: 48px;
   animation: centerLogo 1s ease 1;
@@ -636,6 +640,10 @@ section h2 {
 }
 
 /* ------------------ PORTFOLIO ------------------ */
+.portfolio-click-sign {
+display: none;
+}
+
 .portfolio-projects-container {
   margin-top: 1rem;
   height: calc(100vh - 280px);
@@ -698,6 +706,15 @@ section h2 {
 
 .project-active h3 {
   color: #f5f5f5;
+}
+
+
+.portfolio-container .bg-text {
+  overflow: hidden;
+}
+
+.portfolio-container .bg-text p {
+  transform: translate(8%, 8%);
 }
 
 /* -------------- PORTFOLIO-MODAL -------------- */
@@ -816,14 +833,6 @@ section h2 {
   color: #6EA4BF;
   font-weight: 100;
   padding-bottom: 0.3rem;
-}
-
-.portfolio-container .bg-text {
-  overflow: hidden;
-}
-
-.portfolio-container .bg-text p {
-  transform: translate(8%, 8%);
 }
 
 /* ------------------ CONTACT ------------------ */
