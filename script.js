@@ -50,7 +50,7 @@ const pageSections = document.querySelectorAll("section");
 function scrollToSection(sectionId) {
   let section = pageSections[sectionId];
   let headerOffset = 60;
-  if(window.innerWidth >= 744){
+  if (window.innerWidth >= 744) {
     headerOffset = 100;
   }
   let sectionPosition = section.getBoundingClientRect().top;
@@ -93,7 +93,7 @@ logoBtn.addEventListener("click", () => {
 
 // Scroll with fixed NavBar Btns ----|
 const fixedNavBarBtns = document.querySelectorAll("nav ul button");
-const fixedNavBarIcons = document.querySelectorAll("nav ul i")
+const fixedNavBarIcons = document.querySelectorAll("nav ul i");
 
 fixedNavBarBtns.forEach((btn, index) => {
   btn.addEventListener("click", () => {
@@ -102,42 +102,71 @@ fixedNavBarBtns.forEach((btn, index) => {
 });
 
 // Style fixed NavBar Btns on scroll |
-const pageSectionsExcHome = Array.from(
-  pageSections).filter((el, i) => i > 0);
+const pageSectionsExcHome = Array.from(pageSections).filter((el, i) => i > 0);
 
 window.addEventListener("scroll", styleNavOnScroll);
 
-function styleOnlyOneBtn(i){
+function styleOnlyOneBtn(i) {
   fixedNavBarBtns.forEach((btn, j) => {
-    if (i == j){
-      btn.classList.add("active")
+    if (i == j) {
+      btn.classList.add("active");
     } else {
-      btn.classList.remove("active")
+      btn.classList.remove("active");
     }
   });
   fixedNavBarIcons.forEach((icon, j) => {
-    if (i == j){
-      icon.classList.add("active")
+    if (i == j) {
+      icon.classList.add("active");
     } else {
-      icon.classList.remove("active")
+      icon.classList.remove("active");
     }
   });
-};
+}
 
-function styleNavOnScroll(){
-  for (let i = 0; i < pageSectionsExcHome.length; i++){
+function styleNavOnScroll() {
+  for (let i = 0; i < pageSectionsExcHome.length; i++) {
     let windowHeight = window.innerHeight;
-    let revealTop = pageSectionsExcHome[i].getBoundingClientRect().top
+    let revealTop = pageSectionsExcHome[i].getBoundingClientRect().top;
     let revealPoint = 150;
 
-    if (revealTop < windowHeight - revealPoint){
-      styleOnlyOneBtn(i)
+    if (revealTop < windowHeight - revealPoint) {
+      styleOnlyOneBtn(i);
     } else {
       fixedNavBarBtns[i].classList.remove("active");
       fixedNavBarIcons[i].classList.remove("active");
     }
   }
-};
+}
+
+// Show fixed NavBar title on scroll |
+
+if (window.innerWidth >= 1000) {
+  const homeTitle = document.querySelector(".home-text");
+  window.addEventListener("scroll", showNavTitle);
+
+  function showNavTitle() {
+    let revealBottom = homeTitle.getBoundingClientRect().bottom;
+    let revealPoint = 110;
+
+    if (revealBottom - revealPoint < 0) {
+      navName.style.transitionDelay = "0s";
+      navWebDev.style.transitionDelay = ".6s";
+      navName.classList.add("show");
+      navWebDev.classList.add("show");
+    } else {
+      navName.style.transitionDelay = ".4s";
+      navWebDev.style.transitionDelay = "0s";
+
+      navWebDev.classList.remove("show");
+      navName.classList.remove("show");
+
+      setTimeout(() => {
+        navName.style.transitionDelay = "0s";
+        navWebDev.style.transitionDelay = ".6s";
+      }, 800);
+    }
+  }
+}
 
 // Show/hide language options -------|
 const activeLng = document.getElementById("lang-active");
@@ -236,7 +265,7 @@ for (const card of skillsCards) {
 const portfolioProjectsContainer = document.querySelector(
   ".portfolio-projects-container"
 );
-let projectContainers
+let projectContainers;
 const projectsInfo = {
   cl73: {
     name: "Café Lima 73",
@@ -244,7 +273,7 @@ const projectsInfo = {
     image: "img/portfolio/cl73.jpg",
     video: `img/portfolio/cl73.mp4`,
     website: `https://luisecl.github.io/CL73/`,
-    repository: `https://github.com/LuisECL/CL73`
+    repository: `https://github.com/LuisECL/CL73`,
   },
   tvPlus: {
     name: "TV Plus",
@@ -253,7 +282,7 @@ const projectsInfo = {
     image: "img/portfolio/tv-plus.jpg",
     video: `img/portfolio/tv-plus.mp4`,
     website: `https://tv-plus.herokuapp.com/`,
-    repository: `https://github.com/LuisECL/tv_plus`
+    repository: `https://github.com/LuisECL/tv_plus`,
   },
   kingsLockdown: {
     name: "King's Lockdown",
@@ -262,7 +291,7 @@ const projectsInfo = {
     image: "img/portfolio/kings-lockdown.jpg",
     video: `img/portfolio/kings-lockdown.mp4`,
     website: `https://powerful-beyond-84068.herokuapp.com/`,
-    repository: `https://github.com/LuisECL/kings_lockdown`
+    repository: `https://github.com/LuisECL/kings_lockdown`,
   },
   todoList: {
     name: "Todo list",
@@ -271,7 +300,7 @@ const projectsInfo = {
     image: "img/portfolio/todo-list.jpg",
     video: `img/portfolio/todo-list.mp4`,
     website: `https://luisecl.github.io/todo_list_react/`,
-    repository: `https://github.com/LuisECL/todo_list_react`
+    repository: `https://github.com/LuisECL/todo_list_react`,
   },
   calculator: {
     name: "Simple Calculator",
@@ -280,8 +309,8 @@ const projectsInfo = {
     image: "img/portfolio/simple-calculator.jpg",
     video: `img/portfolio/simple-calculator.mp4`,
     website: `https://luisecl.github.io/simple-calculator/`,
-    repository: `https://github.com/LuisECL/simple-calculator`
-  }
+    repository: `https://github.com/LuisECL/simple-calculator`,
+  },
 };
 const projectsInfoKeys = Object.keys(projectsInfo);
 let projectIndex = 0;

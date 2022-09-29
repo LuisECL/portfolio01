@@ -316,6 +316,11 @@
 
 @media (width >= 1000px) {
   /* ---------------- NAV ---------------- */
+  nav .nav-title {
+    margin-right: auto;
+    transform: translateX(16px);
+  }
+
   nav > a {
     display: none;
   }
@@ -338,6 +343,7 @@
     font-size: 1.5rem;
     padding: 1rem;
     color: #fff;
+    transition: all .2s ease;
   }
 
   .nav-btns button.active {
@@ -346,8 +352,9 @@
   }
 
   .nav-btns button i {
-    color: #6ea4bf;
+    color: #fff;
     padding-right: 0.5rem;
+    transition: all .2s ease;
   }
 
   /* ---------------- HOME ---------------- */
@@ -455,7 +462,7 @@
     margin-right: auto;
   }
 
-  /* ---------------- PORTFOLIO ---------------- */
+  /* ---------------- CONTACT ---------------- */
   .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
