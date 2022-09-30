@@ -281,7 +281,7 @@ const projectsInfo = {
       "TV+ is a SPA developed to search for information about movies, tv shows, videogames or music videos. It's responsive design allows you to use it on large screens, tablets and mobile devices.",
     image: "img/portfolio/tv-plus.jpg",
     video: `img/portfolio/tv-plus.mp4`,
-    website: `https://tv-plus.herokuapp.com/`,
+    website: `https://tv-plus.netlify.app/`,
     repository: `https://github.com/LuisECL/tv_plus`,
   },
   kingsLockdown: {
@@ -290,7 +290,7 @@ const projectsInfo = {
       "SPA developed to showcase drummer Oscar Barcelli's album King's Lockdown (2021) for Best Latin Jazz Album consideration for the Latin Grammy Awards.",
     image: "img/portfolio/kings-lockdown.jpg",
     video: `img/portfolio/kings-lockdown.mp4`,
-    website: `https://powerful-beyond-84068.herokuapp.com/`,
+    website: `https://kings-lockdown.netlify.app/`,
     repository: `https://github.com/LuisECL/kings_lockdown`,
   },
   todoList: {

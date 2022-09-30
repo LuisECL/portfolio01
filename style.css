@@ -102,6 +102,10 @@ nav .fa-circle-xmark {
   font-size: 2rem;
 }
 
+nav .credits {
+  display: none;
+}
+
 /* --------------- MAIN --------------- */
 main {
   margin-top: 60px;
@@ -920,6 +924,10 @@ form button {
   font-family: 'Source Code Pro', monospace;
   font-size: 1rem;
   font-weight: 100;
+}
+
+.contact-click-sign {
+  display: none;
 }
 
 .contact-container .bg-text {

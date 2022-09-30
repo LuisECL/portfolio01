@@ -503,3 +503,153 @@
     bottom: 2vh;
   }
 }
+
+@media (width >= 1280px) {
+  /* ---------------- NAV ---------------- */
+  nav {
+    width: 200px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.5rem 0;
+    background-color: #331E36;
+  }
+
+  nav img {
+    max-height: 150px;
+    z-index: 2;
+  }
+
+  nav::after {
+    content: "";
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    background-color: #220f24;
+    left: 0;
+    top: 0;
+  }
+
+  nav .nav-title {
+    margin-right: 0;
+    transform: translateX(0);
+    z-index: 2;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .nav-title h4 {
+    font-size: 1.5rem;
+  }
+
+  .nav-title p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .nav-btns {
+    flex-direction: column;
+    width: 200px;
+    height: auto;
+    margin: auto 0;
+  }
+
+  .nav-btns li {
+    height: 4rem;
+    width: 100%;
+  }
+
+  .nav-btns button {
+    height: auto;
+    width: 100%;
+  }
+
+  nav .credits {
+    display: flex;
+    margin-top: auto;
+  }
+
+  /* ---------------- MAIN ---------------- */
+  main {
+    margin-top: 0;
+    margin-left: 200px;
+  }
+
+  section {
+    max-width: calc(100vw - 200px);
+    min-height: 100vh;
+  }
+
+  /* ---------------- ABOUT ---------------- */
+  .about-text {
+    max-width: 500px;
+  }
+
+  .about-grid {
+    width: clamp(400px, 30vw, 600px);
+    transform: translateY(0);
+    top: 48px;
+  }
+
+  /* -------------- PORT MODAL -------------- */
+  .portfolio-modal-container {
+    height: 100vh;
+    top: 0;
+    width: calc(100vw - 200px);
+    right: 0;
+  }
+
+  .portfolio-container .bg-text p {
+    transform: translateX(35%);
+  }
+
+  /* -------------- CONTACT -------------- */
+  section.contact-container {
+    min-height: 100vh;
+    display: block;
+  }
+
+  .contact-text {
+    width: calc(100vw - 800px);
+    padding-right: 2.5rem;
+  }
+
+  .contact-container form {
+    grid-row-start: 2;
+    padding: 0;
+    width: 500px;
+    height: calc(100vh - 250px);
+    position: absolute;
+    bottom: 48px;
+    right: 48px;
+  }
+
+  .contact-container .bg-text p {
+    transform: translate(32%, 15%);
+  }
+
+  .contact-click-sign {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 48px;
+    display: block;
+    opacity: 50%;
+    width: 140px;
+    color: #6ea4bf;
+  }
+
+  .contact-click-sign p {
+    width: 100px;
+  }
+
+  .contact-click-sign i {
+    color: #6ea4bf;
+    font-size: 2rem;
+  }
+
+  /* -------------- FOOTER -------------- */
+  footer {
+    display: none;
+  }
+}
