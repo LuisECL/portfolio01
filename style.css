@@ -47,6 +47,11 @@ nav img {
   transition: all 1s;
 }
 
+nav img:hover {
+  cursor: pointer;
+}
+
+
 nav img.center {
   transform: translateX(calc(50vw - 128px));
 }
@@ -102,8 +107,41 @@ nav .fa-circle-xmark {
   font-size: 2rem;
 }
 
+.nav-btns button {
+  height: 100%;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  padding: 1rem;
+  color: #fff;
+  transition: all .2s ease;
+}
+
+.nav-btns button:hover {
+  background-color: #220f24;
+  cursor: pointer;
+}
+
+.nav-btns button.active:hover {
+  background-color: #fff;
+}
+
+.nav-btns button i {
+  color: #fff;
+  padding-right: 0.5rem;
+  transition: all .2s ease;
+}
+
 nav .credits {
   display: none;
+}
+
+.credits i {
+  transition: all .3s ease;
+}
+
+nav .credits a i:hover{
+  transform: translateY(-4px);
 }
 
 /* --------------- MAIN --------------- */
@@ -482,6 +520,10 @@ section h2 {
   transition: all .3s;
 }
 
+.about-anchor:hover {
+  color: #6ea4bf;
+}
+
 .about-anchor.active {
   color: #6EA4BF;
 }
@@ -599,6 +641,11 @@ section h2 {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  transition: all .3s ease;
+}
+
+.card-front:hover {
+  transform: translateY(-8px);
 }
 
 .card-back {
@@ -688,6 +735,14 @@ display: none;
   background-color: #FCF7F8;
   border-radius: 16px;
   overflow: hidden;
+  cursor: pointer;
+  transition: all .3s ease;
+  color: #6ea4bf;
+}
+
+.project-container:hover {
+  background-color: #331E36;
+  color: #fff;
 }
 
 .project-container img {
@@ -702,6 +757,7 @@ display: none;
   font-size: 1.5rem;
   margin-left: 0.5rem;
   font-weight: 400;
+  color: inherit;
 }
 
 .project-active {
@@ -764,6 +820,12 @@ display: none;
   top: 0.5rem;
   right: 0.5rem;
   font-size: 1.5rem;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.portfolio-modal-bg .fa-circle-xmark:hover {
+  color: rgba(255, 255, 255, .5);
 }
 
 .portfolio-modal-bg .project-text {
@@ -816,6 +878,16 @@ display: none;
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.prev-project i, .next-project i {
+  transition: all .3s ease;
+}
+
+.prev-project i:hover, .next-project i:hover {
+  color: rgba(255, 255, 255, .5);
 }
 
 .fa-circle-chevron-right, .fa-circle-chevron-left {
@@ -837,6 +909,12 @@ display: none;
   color: #6EA4BF;
   font-weight: 100;
   padding-bottom: 0.3rem;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.project-links a:hover {
+  color: #fff;
 }
 
 /* ------------------ CONTACT ------------------ */
