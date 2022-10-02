@@ -147,6 +147,10 @@
   }
 
   /* ------------- SKILLS ------------- */
+  .skills-header h2 {
+    font-size: 4rem;
+  }
+
   .skills-header i {
     font-size: 4rem;
     margin-left: 2rem;
@@ -377,6 +381,11 @@
   }
 
   /* ---------------- SKILLS ---------------- */
+  .skills-header h2 {
+    font-size: 5rem;
+  }
+
+
   .skills-click-sign {
     right: 15vw;
   }

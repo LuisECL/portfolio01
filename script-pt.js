@@ -241,7 +241,7 @@ function flipCard(focusedCard) {
     card.classList.remove("card-active");
   }
   focusedCard.classList.add("card-active");
-  skillsHeader.innerHTML = `<h2>Skills</h2>
+  skillsHeader.innerHTML = `<h2>Habilidades</h2>
   <i class="${skillsIcons[focusedCardIcon]}"></i>`;
 }
 
@@ -271,7 +271,7 @@ let projectContainers;
 const projectsInfo = {
   cl73: {
     name: "Café Lima 73",
-    description: `CL73 is a static website developed in the style of a "brochure web page" for the fictional Coffe place Café Lima 73. Its design is fully responsive and allows for visualization in large monitors, tablets and mobile devices.`,
+    description: `CL73 é um site estático desenvolvido no estilo de um "site brochure" para a cafeteria fictícia Café Lima 73. Seu design é completamente responsivo e permite visualização em monitores grandes, tablets e dispositivos móveis.`,
     image: "img/portfolio/cl73.jpg",
     video: `img/portfolio/cl73.mp4`,
     website: `https://luisecl.github.io/CL73/`,
@@ -280,7 +280,7 @@ const projectsInfo = {
   tvPlus: {
     name: "TV Plus",
     description:
-      "TV+ is a SPA developed to search for information about movies, tv shows, videogames or music videos. It's responsive design allows you to use it on large screens, tablets and mobile devices.",
+      "TV+ é uma SPA desenvolvida para procurar informações sobre filmes, séries de tv, videogames ou videoclipes. Seu design responsivo permite usá-lo em telas grandes, tablets e smartphones.",
     image: "img/portfolio/tv-plus.jpg",
     video: `img/portfolio/tv-plus.mp4`,
     website: `https://tv-plus.netlify.app/`,
@@ -289,7 +289,7 @@ const projectsInfo = {
   kingsLockdown: {
     name: "King's Lockdown",
     description:
-      "SPA developed to showcase drummer Oscar Barcelli's album King's Lockdown (2021) for Best Latin Jazz Album consideration for the Latin Grammy Awards.",
+      "SPA desenvolvida para mostrar o álbum King's Lockdown (2021) do baterista Oscar Barcelli, para consideração na categoria Melhor Álbum de Latin Jazz nos Grammy Awards Latinos.",
     image: "img/portfolio/kings-lockdown.jpg",
     video: `img/portfolio/kings-lockdown.mp4`,
     website: `https://kings-lockdown.netlify.app/`,
@@ -298,16 +298,16 @@ const projectsInfo = {
   todoList: {
     name: "Todo list",
     description:
-      "Todo list built with React. This project was made following Dev Ed's video Build a Todo App with REACT available on YouTube.",
+      "Lista de 'por fazer' construida com React. Este projeto foi feito acompanhando o vídeo Build a Todo App with REACT do canal Dev Ed, disponível no Youtube.",
     image: "img/portfolio/todo-list.jpg",
     video: `img/portfolio/todo-list.mp4`,
     website: `https://luisecl.github.io/todo_list_react/`,
     repository: `https://github.com/LuisECL/todo_list_react`,
   },
   calculator: {
-    name: "Simple Calculator",
+    name: "Calculadora Simples",
     description:
-      "This app works as a simple calculator, allowing the user to perform any of the main 4 calculations (add, subtract, multiply, divide), using both whole and decimal numbers.",
+      "Este app funciona como uma calculadora simples, permitindo ao usuário realizar qualquer uma das 4 principais operações matemáticas (adição, subtração, multiplicação e divisão), usando número inteiros e decimais.",
     image: "img/portfolio/simple-calculator.jpg",
     video: `img/portfolio/simple-calculator.mp4`,
     website: `https://luisecl.github.io/simple-calculator/`,
@@ -378,21 +378,21 @@ function showProjectInfo(project) {
         <p>${projectsInfo[project].description}</p>
       </div>
       <video src="${projectsInfo[project].video}" autoplay loop>
-        Your browser does not support the video tag
+        Seu navegador não suporta a tag de vídeo
       </video>
       <div class="portfolio-nav">
         <div class="prev-project">
           <i class="fa-solid fa-circle-chevron-left"></i>
-          <p>Prev</p>
+          <p>Ant</p>
         </div>
         <div class="next-project">
           <i class="fa-solid fa-circle-chevron-right"></i>
-          <p>Next</p>
+          <p>Seg</p>
         </div>
       </div>
       <div class="project-links">
-        <a href="${projectsInfo[project].website}" target="blank">Website</a>
-        <a href="${projectsInfo[project].repository}" target="blank">Repository</a>
+        <a href="${projectsInfo[project].website}" target="blank">Site</a>
+        <a href="${projectsInfo[project].repository}" target="blank">Repositório</a>
       </div>
     </div>`;
 
