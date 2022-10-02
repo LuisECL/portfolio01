@@ -273,6 +273,7 @@ main section {
   padding: 0.5rem 0;
   text-align: end;
   color: #220F24;
+  cursor: pointer;
 }
 
 .languages {
@@ -283,6 +284,15 @@ main section {
   display: none;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
+}
+
+.languages a {
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.languages a:hover {
+  background-color: rgba(0, 0, 0, 0.2);;
 }
 
 .languages ul.active {
