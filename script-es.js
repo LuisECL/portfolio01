@@ -271,7 +271,7 @@ let projectContainers;
 const projectsInfo = {
   cl73: {
     name: "Café Lima 73",
-    description: `CL73 é um site estático desenvolvido no estilo de um "site brochure" para a cafeteria fictícia Café Lima 73. Seu design é completamente responsivo e permite visualização em monitores grandes, tablets e dispositivos móveis.`,
+    description: `CL73 es una página estática desarrollada al estilo de una "página brochure" para la cafetería ficticia Café Lima 73. Su diseño es completamente responsivo y permite la visualización en monitores grandes, tablets y dispositivos móviles.`,
     image: "img/portfolio/cl73.jpg",
     video: `img/portfolio/cl73.mp4`,
     website: `https://luisecl.github.io/CL73/`,
@@ -280,7 +280,7 @@ const projectsInfo = {
   tvPlus: {
     name: "TV Plus",
     description:
-      "TV+ é uma SPA desenvolvida para procurar informações sobre filmes, séries de tv, videogames ou videoclipes. Seu design responsivo permite usá-lo em telas grandes, tablets e smartphones.",
+      "TV+ es una SPA desarrollada para buscar informaciones sobre películas, series de televisión, videojuegos o videoclips. Su diseño responsivo permite usarlo en pantallas grandes, tablets y smartphones.",
     image: "img/portfolio/tv-plus.jpg",
     video: `img/portfolio/tv-plus.mp4`,
     website: `https://tv-plus.netlify.app/`,
@@ -289,7 +289,7 @@ const projectsInfo = {
   kingsLockdown: {
     name: "King's Lockdown",
     description:
-      "SPA desenvolvida para mostrar o álbum King's Lockdown (2021) do baterista Oscar Barcelli, para consideração na categoria Melhor Álbum de Latin Jazz nos Grammy Awards Latinos.",
+      "SPA desarrollada para mostrar el album King's Lockdown (2021) del baterista Oscar Barcelli, para consideración en la categoría Mejor Album de Latin Jazz en los Grammy Awards Latinos.",
     image: "img/portfolio/kings-lockdown.jpg",
     video: `img/portfolio/kings-lockdown.mp4`,
     website: `https://kings-lockdown.netlify.app/`,
@@ -298,7 +298,7 @@ const projectsInfo = {
   todoList: {
     name: "Todo list",
     description:
-      "Lista de 'por fazer' construida com React. Este projeto foi feito acompanhando o vídeo Build a Todo App with REACT do canal Dev Ed, disponível no Youtube.",
+      "Lista de 'por hacer' construída con React. Este proyecto fue hecho acompañando el video Build a Todo App with REACT del canal Dev Ed, disponible en Youtube.",
     image: "img/portfolio/todo-list.jpg",
     video: `img/portfolio/todo-list.mp4`,
     website: `https://luisecl.github.io/todo_list_react/`,
@@ -307,7 +307,7 @@ const projectsInfo = {
   calculator: {
     name: "Calculadora",
     description:
-      "Este app funciona como uma calculadora simples, permitindo ao usuário realizar qualquer uma das 4 principais operações matemáticas (adição, subtração, multiplicação e divisão), usando número inteiros e decimais.",
+      "Esta app funciona como una calculadora simple, permitiendo al usuario realizar cualquiera de las 4 principales operaciones matemáticas (suma, resta, multiplicación y división), usando números enteros y decimales.",
     image: "img/portfolio/simple-calculator.jpg",
     video: `img/portfolio/simple-calculator.mp4`,
     website: `https://luisecl.github.io/simple-calculator/`,
@@ -387,12 +387,12 @@ function showProjectInfo(project) {
         </div>
         <div class="next-project">
           <i class="fa-solid fa-circle-chevron-right"></i>
-          <p>Seg</p>
+          <p>Sig</p>
         </div>
       </div>
       <div class="project-links">
-        <a href="${projectsInfo[project].website}" target="blank">Site</a>
-        <a href="${projectsInfo[project].repository}" target="blank">Repositório</a>
+        <a href="${projectsInfo[project].website}" target="blank">Página</a>
+        <a href="${projectsInfo[project].repository}" target="blank">Repositorio</a>
       </div>
     </div>`;
 
