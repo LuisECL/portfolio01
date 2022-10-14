@@ -41,6 +41,10 @@ nav {
   display: none;
 }
 
+.nav-btns li button:hover{
+  background-color: #331E36;
+}
+
 nav img {
   max-height: 48px;
   animation: centerLogo 1s ease 1;
